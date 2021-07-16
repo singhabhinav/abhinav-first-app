@@ -12,7 +12,7 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
 
-    bucket_name: "my-first-app-bucket"
+    bucket_name: "abhinav-testing-to-be-removed"
 
     bucket_path: "docker"
 
@@ -27,7 +27,7 @@ deploy:
     access_key_id: $AWS_ACCESS_KEY
     secret_access_key: $AWS_SECRET_KEY
 
-    bucket_name: "my-first-app-bucket"
+    bucket_name: "abhinav-testing-to-be-removed"
   
     bucket_path: "docker"
 
