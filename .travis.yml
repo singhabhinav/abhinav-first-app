@@ -1,36 +1,33 @@
 language: generic
 
 services:
-  - docker
+    - docker
 
 deploy:
-  - provider: elasticbeanstalk
-    region: ap-south-1
-    app: "my-first-app"
-    env: "Myfirstapp-env"
-
-    access_key_id: $AWS_ACCESS_KEY
-    secret_access_key: $AWS_SECRET_KEY
-
-    bucket_name: "abhinav-testing-to-be-removed"
-
-    bucket_path: "docker"
-
-    on:
-      branch: main
-
-  - provider: elasticbeanstalk
-    region: ap-south-1
-    app: "test-app"
-    env: "Testapp-env"
-
-    access_key_id: $AWS_ACCESS_KEY
-    secret_access_key: $AWS_SECRET_KEY
-
-    bucket_name: "abhinav-testing-to-be-removed"
-  
-    bucket_path: "docker"
-
-
-    on:
-      branch: testing 
+    - provider: elasticbeanstalk
+      access_key_id: $AWS_ACCESS_KEY
+      secret_access_key: $AWS_SECRET_KEY
+      region: "ap-south-1"
+      app: "static-app-testing"
+      env: "Staticapptesting-env"
+      bucket_name: "abhinav-static-app-to-be-deleted"
+      on:
+        branch: testing
+    - provider: elasticbeanstalk
+      access_key_id: $AWS_ACCESS_KEY
+      secret_access_key: $AWS_SECRET_KEY
+      region: "ap-south-1"
+      app: "static-app-staging"
+      env: "Staticappstaging-env"
+      bucket_name: "abhinav-static-app-to-be-deleted"
+      on:
+        branch: staging
+    - provider: elasticbeanstalk
+      access_key_id: $AWS_ACCESS_KEY
+      secret_access_key: $AWS_SECRET_KEY
+      region: "ap-south-1"
+      app: "static-app-production"
+      env: "Staticappproduction-env"
+      bucket_name: "abhinav-static-app-to-be-deleted"
+      on:
+        branch: main
