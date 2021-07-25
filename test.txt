@@ -4,3 +4,4 @@ Added a shell script in a build step
 Added a non zero status code inside the shell script in the build step
 sample push
 sampel push to deploy the app
+sample push
